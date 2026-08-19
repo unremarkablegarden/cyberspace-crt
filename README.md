@@ -1,3 +1,5 @@
+![Cyberspace CRT screenshot](https://github.com/unremarkablegarden/cyberspace-crt/blob/main/screenshot.png?raw=true)
+
 # cyberspace-crt
 
 A WebGL2 CRT with a text grid behind it.
