@@ -50,6 +50,7 @@ export default {
 
 `s.term` is the grid:
 
+| | |
 | --- | --- |
 | `put(x, y, ch, attr, inv)` | one cell; `ch` is a character or a codepoint |
 | `text(x, y, str, attr, inv)` | a run, returns the x it ended at |
