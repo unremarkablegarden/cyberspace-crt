@@ -1,0 +1,21 @@
+{
+  "name": "cyberspace-crt",
+  "version": "0.1.0",
+  "description": "A WebGL2 CRT with a text grid behind it. Plain ES modules, no build step.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Unremarkable Garden",
+  "keywords": ["crt", "terminal", "webgl2", "shader", "bitmap-font", "bdf", "phosphor"],
+  "exports": {
+    ".": "./src/screen.js",
+    "./term": "./src/term.js",
+    "./crt": "./src/crt.js",
+    "./bdf": "./src/bdf.js",
+    "./vector": "./src/vector.js",
+    "./config": "./config.js"
+  },
+  "files": ["src", "fonts", "config.js", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "python3 -m http.server 8000"
+  }
+}
