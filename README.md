@@ -1,19 +1,15 @@
 # cyberspace-crt
 
-A WebGL2 CRT with a text grid behind it. Plain ES modules — no framework, no
-bundler, no build step, no dependencies.
+A WebGL2 CRT with a text grid behind it.
 
 Extracted from the `/terminal` page on [cyberspace.online](https://cyberspace.online).
-The shell, commands and programs that ran on it are not included.
+The shell, commands and programs that run on it are not included.
 
 ## How it works
 
-The framebuffer holds beam intensity, not colour: one byte per pixel saying how
-hard the gun hit that spot. Text rasterises into it from a bitmap font.
+The framebuffer holds beam intensity, not colour: one byte per pixel saying how hard the gun hit that spot. Text rasterises into it from a bitmap font.
 
-Colour is applied once, in the last shader pass, as a `vec3` multiplied over the
-beam. Changing the phosphor from green to amber is one uniform and no
-re-rasterisation.
+Colour is applied once, in the last shader pass, as a `vec3` multiplied over the beam. Changing the phosphor from green to amber is one uniform and no re-rasterisation.
 
 Four passes run between the two:
 
@@ -28,7 +24,7 @@ Four passes run between the two:
 ## Run it
 
 ```sh
-python3 -m http.server 8000    # or: npx serve, bunx serve, php -S localhost:8000
+npx serve # or: bunx serve, python3 -m http.server 8000, php -S localhost:8000
 ```
 
 Then open <http://localhost:8000>.
@@ -55,7 +51,6 @@ export default {
 `s.term` is the grid:
 
 | | |
-| --- | --- |
 | `put(x, y, ch, attr, inv)` | one cell; `ch` is a character or a codepoint |
 | `text(x, y, str, attr, inv)` | a run, returns the x it ended at |
 | `write(str, attr)` / `writeln(...)` | at the cursor, wrapping and scrolling |
